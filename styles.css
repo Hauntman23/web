@@ -61,7 +61,11 @@ button, input {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image: url("icon.png?v=20260812b");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: grid;
   place-items: center;
   border: 1px solid rgba(237, 243, 255, 0.12);
