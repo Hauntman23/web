@@ -3,59 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Misery Discord bot command directory." />
     <title>Misery Commands</title>
-    <meta name="description" content="Public command directory for Misery." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20260812" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20260812c" />
   </head>
   <body>
-    <div class="page-shell">
+    <main class="directory-shell">
       <header class="site-header">
-        <div class="nav-left">
-          <div class="bot-avatar" aria-label="Misery bot icon">
-            <span class="bot-mark">M</span>
-          </div>
-          <nav class="main-nav" aria-label="Main navigation">
-            <a class="active" href="#">Commands</a>
-            <a href="#">Discover</a>
-            <a href="#">Status</a>
-            <a href="#">Docs</a>
-            <a href="#">Embeds</a>
-          </nav>
-        </div>
-
-        <div class="nav-right">
-          <div class="sponsor-pill">
-            <span class="spark">✦</span>
-            <span>Sponsored by HostingBot</span>
-          </div>
-        </div>
+        <a class="brand" href="#" aria-label="Misery home">
+          <img src="icon.png?v=20260812b" alt="Misery bot icon" />
+          <span>Misery</span>
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a class="active" href="#commands">Commands</a>
+          <a href="#commands">Discover</a>
+          <a href="#commands">Status</a>
+          <a href="#commands">Docs</a>
+          <a href="#commands">Embeds</a>
+        </nav>
+        <span class="site-status"><i></i> online</span>
       </header>
 
-      <main class="content">
-        <section class="title-row">
-          <div>
-            <div class="title-wrap">
-              <span class="title-code">&lt;/&gt;</span>
-              <h1>Commands</h1>
+      <section class="directory-layout" id="commands">
+        <aside class="category-card">
+          <p class="overline">Misery bot</p>
+          <h1>Command<br />directory</h1>
+          <p class="category-copy">Browse every public command by module.</p>
+          <div class="rule"></div>
+          <p class="category-label">Select category</p>
+          <div id="module-grid" class="module-list" aria-label="Command categories"></div>
+        </aside>
+
+        <section class="commands-column" aria-labelledby="command-heading">
+          <div class="commands-heading">
+            <div>
+              <p class="overline">Public commands</p>
+              <h2 id="command-heading">All commands</h2>
             </div>
-            <p class="title-sub">Public command directory for Misery. Fast search, clean modules, and complete syntax.</p>
+            <span id="result-count" class="result-count"></span>
           </div>
-          <div class="header-actions">
-            <input id="search" class="search-input" type="search" placeholder="Search commands, aliases, descriptions..." aria-label="Search commands" />
-          </div>
-        </section>
-
-        <section class="module-strip" id="module-grid" aria-label="Command categories"></section>
-
-        <section class="command-panel">
+          <label class="search-wrap">
+            <span aria-hidden="true">⌕</span>
+            <input id="search" type="search" placeholder="Search for commands" aria-label="Search for commands" />
+          </label>
           <div id="command-list" class="command-list"></div>
         </section>
-      </main>
-    </div>
-
-    <script src="app.js?v=20260812"></script>
+      </section>
+    </main>
+    <script src="app.js?v=20260812c"></script>
   </body>
 </html>
