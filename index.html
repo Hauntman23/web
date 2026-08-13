@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Misery Commands</title>
     <meta name="description" content="Public command directory for Misery." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -35,13 +38,15 @@
 
       <main class="content">
         <section class="title-row">
-          <div class="title-wrap">
-            <span class="title-code">&lt;/&gt;</span>
-            <h1>Commands</h1>
+          <div>
+            <div class="title-wrap">
+              <span class="title-code">&lt;/&gt;</span>
+              <h1>Commands</h1>
+            </div>
+            <p class="title-sub">Public command directory for Misery. Fast search, clean modules, and complete syntax.</p>
           </div>
           <div class="header-actions">
-            <button class="search-btn" aria-label="Search commands">⌕</button>
-            <button class="profile-btn" aria-label="Profile">◔</button>
+            <input id="search" class="search-input" type="search" placeholder="Search commands, aliases, descriptions..." aria-label="Search commands" />
           </div>
         </section>
 

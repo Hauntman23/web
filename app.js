@@ -1,5 +1,6 @@
 const moduleGrid = document.getElementById('module-grid');
 const commandList = document.getElementById('command-list');
+const searchInput = document.getElementById('search');
 
 let allData = { modules: [], totalCommands: 0 };
 let activeModule = 'all';
@@ -47,7 +48,7 @@ function renderCommands() {
 
   const filtered = visible.filter(command => {
     const haystack = [command.name, command.description, ...(command.aliases || [])].join(' ').toLowerCase();
-    return haystack.includes((document.getElementById('search')?.value || '').trim().toLowerCase());
+    return haystack.includes((searchInput?.value || '').trim().toLowerCase());
   });
 
   if (!filtered.length) {
@@ -71,7 +72,7 @@ function renderCommands() {
 
       <div class="command-section">
         <label>permissions</label>
-        <span class="value-box">${command.permissions || 'None'}</span>
+        <span class="value-box">${Array.isArray(command.permissions) ? (command.permissions.join(', ') || 'None') : (command.permissions || 'None')}</span>
       </div>
     </article>
   `).join('');
@@ -85,13 +86,9 @@ async function loadCommands() {
   renderCommands();
 }
 
-const searchInput = document.createElement('input');
-searchInput.id = 'search';
-searchInput.type = 'search';
-searchInput.placeholder = 'Search';
-searchInput.style.display = 'none';
-searchInput.addEventListener('input', renderCommands);
-document.body.appendChild(searchInput);
+if (searchInput) {
+  searchInput.addEventListener('input', renderCommands);
+}
 
 loadCommands().catch(error => {
   commandList.innerHTML = `<div class="empty-state">${error.message}</div>`;
