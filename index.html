@@ -3,31 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kuaa Commands</title>
-    <meta name="description" content="Public command directory for Kuaa." />
+    <title>Misery Commands</title>
+    <meta name="description" content="Public command directory for Misery." />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="page-shell">
-      <header class="topbar">
-        <div>
-          <p class="eyebrow">Public command list</p>
-          <h1>Kuaa</h1>
+      <header class="site-header">
+        <div class="nav-left">
+          <div class="bot-avatar" aria-label="Misery bot icon">
+            <span class="bot-mark">M</span>
+          </div>
+          <nav class="main-nav" aria-label="Main navigation">
+            <a class="active" href="#">Commands</a>
+            <a href="#">Discover</a>
+            <a href="#">Status</a>
+            <a href="#">Docs</a>
+            <a href="#">Embeds</a>
+          </nav>
+        </div>
+
+        <div class="nav-right">
+          <div class="sponsor-pill">
+            <span class="spark">✦</span>
+            <span>Sponsored by HostingBot</span>
+          </div>
+          <button class="icon-btn" aria-label="Search">⌕</button>
+          <button class="icon-btn user-btn" aria-label="Profile">◔</button>
         </div>
       </header>
 
       <main class="content">
-        <section class="hero-card">
-          <h2>Modules</h2>
-          <p>Browse all public commands by category.</p>
-          <div id="module-grid" class="module-grid"></div>
+        <section class="title-row">
+          <div class="title-wrap">
+            <span class="title-code">&lt;/&gt;</span>
+            <h1>Commands</h1>
+          </div>
+          <div class="header-actions">
+            <button class="search-btn" aria-label="Search commands">⌕</button>
+            <button class="profile-btn" aria-label="Profile">◔</button>
+          </div>
         </section>
 
-        <section class="panel">
-          <div class="panel-header">
-            <h3>Commands</h3>
-            <input id="search" type="search" placeholder="Search commands..." aria-label="Search commands" />
-          </div>
+        <section class="module-strip" id="module-grid" aria-label="Command categories"></section>
+
+        <section class="command-panel">
           <div id="command-list" class="command-list"></div>
         </section>
       </main>
