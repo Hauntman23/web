@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuaa Commands</title>
+    <meta name="description" content="Public command directory for Kuaa." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Public command list</p>
+          <h1>Kuaa</h1>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="hero-card">
+          <h2>Modules</h2>
+          <p>Browse all public commands by category.</p>
+          <div id="module-grid" class="module-grid"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <h3>Commands</h3>
+            <input id="search" type="search" placeholder="Search commands..." aria-label="Search commands" />
+          </div>
+          <div id="command-list" class="command-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
